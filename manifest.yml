@@ -1,8 +1,8 @@
 ---
-name : twitter
-website : http://twitter.github.com/bootstrap
-git_url : git://github.com/jekyllbootstrap/theme-twitter.git
-source_url : https://github.com/jekyllbootstrap/theme-twitter
+name : foundation
+website : http://foundation.zurb.com/
+git_url : git://github.com/plozi/theme-foundation.git
+source_url : https://github.com/plozi/theme-foundation
 author:
-  name : "Jacob Thornton and Mark Otto"
-  website : http://twitter.github.com/bootstrap
+  name : "Christian Polzer"
+  website : https://github.com/plozi

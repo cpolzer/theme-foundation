@@ -12,8 +12,8 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/css/1.4.0/bootstrap.css" rel="stylesheet">
-    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/stylesheets/foundation.min.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/stylesheets/app.css" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -26,29 +26,40 @@
 
   <body>
 
-    <div class="topbar">
-      <div class="fill">
-        <div class="container">
-          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-          <ul class="nav">
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
+  <div class="contain-to-grid row">
+      <nav class="top-bar">
+          <ul class="left">
+              <li><a href="#">{{ site.title }}</a></li>
+
+              <!-- more links can be added here<li class="has-dropdown">
+                  <a href="#">Link</a>
+
+                  <ul class="dropdown">
+                      <li><a href="#">Dropdown Link</a></li>
+                  </ul>
+
+              </li>-->
           </ul>
-        </div>
-      </div>
-    </div>
 
-    <div class="container">
+          <ul class="right">
+              {% assign pages_list = site.pages %}
+              {% assign group = 'navigation' %}
+              {% include JB/pages_list %}
+          </ul>
+      </nav>
+  </div>
 
-      <div class="content">
+
+    <div class="row">
+
+      <div class="twelve columns">
         {{ content }}
       </div>
 
       <footer>
         <p>&copy; {{ site.author.name }} 2012 
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+          and <a href="http://foundation.zurb.com" target="_blank" title="The most advanced responsive front-end framework in the world.">Zurb's Foundation 3</a>
         </p>
       </footer>
 
