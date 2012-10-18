@@ -1,9 +1,12 @@
-<div class="page-header">
-  <h1>{{ page.title }} <small>Supporting tagline</small></h1>
-</div>
+<header class="row">
+    <div class="eight columns">
+        <h1>{{ page.title }} </h1>
+        {% if page.tagline %} <h4 class="subheader">{{ page.tagline }}</h4>{% endif %}
+    </div>
+</header>
 
 <div class="row">
-  <div class="span8">
+  <div class="eight columns">
     {{ content }}
     <hr>
     <div class="pagination">
@@ -25,7 +28,7 @@
     {% include JB/comments %}
   </div>
   
-  <div class="span4">
+  <div class="four columns">
     <h4>Published</h4>
     <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
 
